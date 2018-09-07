@@ -1,0 +1,29 @@
+<view class="page">
+
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title" wx:for="{{foodData}}">
+      <button class='show-btn' bindtap="showDialogBtn" data-id='{{item.food}}' hover-class="weui-cell_active">
+        <text>{{item.foodname}}</text>
+        <image class="jiahao" src='/images/+.png'></image>
+      </button>
+    </view>
+    <!--弹窗-->
+    <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+    <view class="modal-dialog" wx:if="{{showModal}}">
+      <view class="modal-title">{{thisFood.foodname}}</view>
+      <view class="modal-content">
+        <text>每100g{{thisFood.foodname}}含有能量：{{thisFood.cal}}卡蛋白质：{{thisFood.protein}}g碳水化合物：{{thisFood.carbo}}g</text>
+      </view>
+      <view class="input">
+        <text class='info-text'>添加数量：</text>
+        <input type="number" maxlength="7" bindinput="inputChange" class="modal-input" placeholder="100"></input>
+        <text style='color:grey; font-size:30rpx;'>克</text>
+      </view>
+      <view class="modal-footer">
+        <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+        <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+      </view>
+    </view>
+  </view>
+
+</view>

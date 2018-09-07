@@ -1,0 +1,7 @@
+/* pages/personalCenter/alter.wxss */
+.save-btn{
+  margin-top: 70rpx;
+}
+.save-btn button{
+  width: 70%;
+}

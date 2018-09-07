@@ -1,0 +1,12 @@
+<!--pages/deletefood/deletefood.wxml-->
+<form>
+  <view class="time weui-cells weui-cells_after-title">
+    <view class="tex1">{{food.foodname}}</view>
+    <view class="tex2"><text>{{food.num}}g</text></view>
+  </view>
+
+  <!-- 删除按钮 -->
+  <view class="del">
+    <button type="warn" bindtap='delBind' plain='true' size=''>删除</button>
+  </view>
+</form>

@@ -1,0 +1,33 @@
+<!--pages/personalCenter/alter.wxml-->
+<view class="weui-cells__title">编辑资料</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">身高(cm)</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input bindinput="heightChange" type="number" maxlength="3" class="weui-input" placeholder="{{height}}" />
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">体重(kg)</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input bindinput="weightChange" type="number" maxlength="3" class="weui-input" placeholder="{{weight}}" />
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">出生年月</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="weui-input">{{birth}}</view>
+      </picker>
+    </view>
+  </view>
+</view>
+<view class="save-btn">
+  <button type="primary" bindtap='save' plain='true' size=''>保存</button>
+</view>

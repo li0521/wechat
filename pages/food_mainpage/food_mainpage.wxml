@@ -1,0 +1,198 @@
+<view class='module1'>
+  <view class="history">
+    <picker mode="date" value="{{date}}" bindchange="bindPickerChange_sj" end="{{endDate}}">
+      <view class="date"><text>{{hisDate}}</text><image style='width:20rpx; height:16rpx;' src='{{sanjiao}}'></image></view>
+    </picker>
+    <navigator url="/pages/foodhistory/foodhistory" hover-class='none'>
+      <text class="lishi">历史记录</text>
+    </navigator>
+  </view>
+
+ <view class='record2'>
+    <view class='hot'>
+      <text class='ftext'> 热量： </text>
+      <text calss='ftext2'> {{foodData.calSum}}千卡</text>
+    </view>
+     <view class='protein'>
+      <text class='ftext'> 蛋白质： </text>
+      <text calss='ftext2'> {{foodData.proSum}}克</text>
+    </view>
+ </view>
+
+  <view class='record3'>
+    <view class='hot'>
+      <text class='ftext'> 脂肪： </text>
+      <text calss='ftext2'> {{foodData.fatSum}}克</text>
+    </view>
+     <view class='protein'>
+      <text class='ftext'> 碳水化合物： </text>
+      <text calss='ftext2'> {{foodData.carSum}} 克</text>
+    </view>
+ </view>
+</view>
+<view class='module2'>  </view>
+
+<!-- 早餐列表 -->
+<view class='breakfast'> 
+  <view class='bre_text'>
+    <text class='bre'> 早餐 <text class='bre_hot'> {{foodData.breCal}}千卡</text> </text>
+    <view class='add' bindtap='goTofirst' data-id='bre'> 添加 </view>
+  </view>
+
+  <view class='bre_allnum'>
+   <text>蛋白质 {{foodData.brePro}}克</text>
+   <text> / 碳水化合物 {{foodData.breCar}}克</text>
+   <text> / 脂肪 {{foodData.breFat}}克</text>
+  </view>
+
+  <view class='bre_food1 weui-cells weui-cells_after-title'>
+    <navigator wx:for='{{foodData.breList}}' url="/pages/deletefood/deletefood" data-food='{{item}}' class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='tap'>
+      <view class="weui-cell__bd">
+        <text class='food'>{{item.foodname}}  {{item.num}}g</text>
+      </view>
+      <view>
+        <text class='food_hot_num'> {{item.cal}}千卡</text>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+
+</view>
+
+<view class='module2'>  </view>
+
+<!-- 上午加餐列表 -->
+<view class='breakfast'> 
+  <view class='bre_text'>
+    <text class='bre'> 上午加餐 <text class='bre_hot'> {{foodData.breAddCal}}千卡</text></text>
+    <view class='add' bindtap='goTofirst' data-id='breAdd'> 添加 </view>
+  </view>
+  <view class='bre_allnum'>
+    <text>蛋白质 {{foodData.breAddPro}}克</text>
+    <text> / 碳水化合物 {{foodData.breAddCar}}克</text>
+    <text> / 脂肪 {{foodData.breAddFat}}克</text>
+  </view>
+
+  <view class='bre_food1 weui-cells weui-cells_after-title'>
+    <navigator wx:for='{{foodData.breAddList}}' url="/pages/deletefood/deletefood" data-food='{{item}}' class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='tap'>
+      <view class="weui-cell__bd">
+        <text class='food'>{{item.foodname}}  {{item.num}}g</text>
+      </view>
+      <view>
+        <text class='food_hot_num'> {{item.cal}}千卡</text>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>
+
+<view class='module2'>  </view>
+
+
+<!-- 午餐列表 -->
+<view class='breakfast'> 
+  <view class='bre_text'>
+    <text class='bre'> 午餐 <text class='bre_hot'> {{foodData.lunCal}}千卡</text></text>
+    <view class='add' bindtap='goTofirst' data-id='lun'> 添加 </view>
+  </view>
+  <view class='bre_allnum'>
+   <text>蛋白质 {{foodData.lunPro}}克</text>
+   <text> / 碳水化合物 {{foodData.lunCar}}克</text>
+   <text> / 脂肪 {{foodData.lunFat}}克</text>
+  </view>
+
+  <view class='bre_food1 weui-cells weui-cells_after-title'>
+    <navigator wx:for='{{foodData.lunList}}' url="/pages/deletefood/deletefood" data-food='{{item}}' class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='tap'>
+      <view class="weui-cell__bd">
+        <text class='food'>{{item.foodname}}  {{item.num}}g</text>
+      </view>
+      <view>
+        <text class='food_hot_num'> {{item.cal}}千卡</text>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>
+
+<view class='module2'>  </view>
+
+<!-- 下午加餐列表 -->
+<view class='breakfast'> 
+  <view class='bre_text'>
+    <text class='bre'> 下午加餐 <text class='bre_hot'> {{foodData.lunAddCal}}千卡</text></text>
+    <view class='add' bindtap='goTofirst' data-id='lunAdd'> 添加 </view>
+  </view>
+  <view class='bre_allnum'>
+   <text>蛋白质 {{foodData.lunAddPro}}克</text>
+   <text> / 碳水化合物 {{foodData.lunAddCar}}克</text>
+   <text> / 脂肪 {{foodData.lunAddFat}}克</text>
+  </view>
+
+  <view class='bre_food1 weui-cells weui-cells_after-title'>
+    <navigator wx:for='{{foodData.lunAddList}}' url="/pages/deletefood/deletefood" data-food='{{item}}' class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='tap'>
+      <view class="weui-cell__bd">
+        <text class='food'>{{item.foodname}}  {{item.num}}g</text>
+      </view>
+      <view>
+        <text class='food_hot_num'> {{item.cal}}千卡</text>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>
+
+<view class='module2'>  </view>
+
+<!-- 晚餐列表 -->
+<view class='breakfast'> 
+  <view class='bre_text'>
+    <text class='bre'> 晚餐   <text class='bre_hot'> {{foodData.dinCal}}千卡</text></text>
+    <view class='add' bindtap='goTofirst' data-id='din'> 添加 </view>
+  </view>
+  <view class='bre_allnum'>
+    <text>蛋白质 {{foodData.dinPro}}克</text>
+    <text> / 碳水化合物 {{foodData.dinCar}}克</text>
+    <text> / 脂肪 {{foodData.dinFat}}克</text>
+  </view>
+
+  <view class='din_food1 weui-cells weui-cells_after-title'>
+    <navigator wx:for='{{foodData.dinList}}' url="/pages/deletefood/deletefood" data-food='{{item}}' class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='tap'>
+      <view class="weui-cell__bd">
+        <text class='food'>{{item.foodname}}  {{item.num}}g</text>
+      </view>
+      <view>
+        <text class='food_hot_num'> {{item.cal}}千卡</text>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>
+
+<view class='module2'>  </view>
+
+<!-- 晚上加餐列表 -->
+<view class='breakfast'> 
+  <view class='bre_text'>
+    <text class='bre'> 晚上加餐 <text class='bre_hot'> {{foodData.dinAddCal}}千卡</text></text>
+    <view class='add' bindtap='goTofirst' data-id='dinAdd'> 添加 </view>
+  </view>
+  <view class='bre_allnum'>
+    <text>蛋白质 {{foodData.dinAddPro}}克</text>
+    <text> / 碳水化合物 {{foodData.dinAddCar}}克</text>
+    <text> / 脂肪 {{foodData.dinAddFat}}克</text>
+  </view>
+
+  <view class='din_food1 weui-cells weui-cells_after-title'>
+    <navigator wx:for='{{foodData.dinAddList}}' url="/pages/deletefood/deletefood" data-food='{{item}}' class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='tap'>
+      <view class="weui-cell__bd">
+        <text class='food'>{{item.foodname}}  {{item.num}}g</text>
+      </view>
+      <view>
+        <text class='food_hot_num'> {{item.cal}}千卡</text>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>
+
+

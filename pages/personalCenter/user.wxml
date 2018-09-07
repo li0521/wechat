@@ -1,0 +1,43 @@
+<!--pages/personal center/user.wxml-->
+  <view>
+    <view class="personalBk">
+      <image src='{{personalBk}}' style="width: 100%; height: 450rpx; background-color: #eeeeee;" mode="aspectFill"></image>
+      <view class="user">
+        <button wx:if='{{!hasUserInfo}}' open-type='getUserInfo' bindgetuserinfo="bindGetUserInfo" >点击授权登录</button>
+        <image wx:if='{{hasUserInfo}}' style="width: 120rpx; height: 120rpx; border-radius: 50%;" src="{{userInfo.avatarUrl}}"></image>
+        <text decode="{{true}}">{{userInfo.nickName}}</text>
+      </view>
+      <view class='alter' bindtap='alter'>
+        <text>修改资料</text>
+        <icon type="info_circle" size="18" color='white'></icon>
+      </view>
+    </view>
+
+    <view style="margin-top:-13rpx" class="weui-cells weui-cells_after-title">
+      <view class="personalData weui-cell weui-cell_access">
+        <text>性别</text>
+        <text>{{sex}}</text>
+      </view>
+      <view class="personalData weui-cell weui-cell_access">
+        <text>身高</text>
+        <text class='data'>{{height}}cm</text>
+      </view>
+      <view class="personalData weui-cell weui-cell_access">
+        <text>体重</text>
+        <text class='data'>{{weight}}kg</text>
+      </view>
+      <view class="personalData weui-cell weui-cell_access">
+        <text>出生年月</text>
+        <text class='data'>{{birth}}</text>
+      </view>
+      <view class="personalData weui-cell weui-cell_access">
+        <view class='btn'>基础代谢消耗查询</view>
+        <text class='data'>{{cal}}千卡</text>
+      </view>
+      <view class="personalData weui-cell weui-cell_access">
+        <view class='btn'>身高体重指数查询</view>
+        <text class='data'>{{bmi}}</text>
+      </view>
+    </view>
+  </view>
+

@@ -1,0 +1,122 @@
+/* pages/foodtype/mainfood/mainfood.wxss */
+.jiahao{
+  height: 32rpx;
+  width:32rpx;
+  margin-left: 580rpx;
+}
+.jinri{
+  height: 70rpx;
+  background-color: white;
+  padding-top: 20rpx;
+  padding-bottom: 0rpx;
+  margin-bottom: 0rpx;
+}
+.jinri text{
+  box-sizing: border-box;
+  font-size: 20rpx;
+  padding-left: -300rpx;
+  margin-right: 580rpx;
+}
+.input{
+  color: gray;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32rpx;
+}
+.info-text{
+  font-size: 30rpx;
+  color: black;
+}
+.show-btn {
+  text-align: left;
+  background: none !important;
+  color: #000 !important;
+}
+.show-btn::after{
+  border: none;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 10rpx;
+}
+
+.modal-title {
+  background-color: #00bcd4;
+  padding-top: 0rpx;
+  font-size: 40rpx;
+  color: white;
+  text-align: center;
+}
+
+.modal-content {
+  text-align: center;
+  font-size: 30rpx;
+  color: grey;
+  padding: 32rpx 32rpx;
+}
+
+.modal-input {
+  width: 200rpx;
+  height: 60rpx;
+  background: #fff;
+  border: 1rpx solid gray;
+  border-radius: 100rpx;
+  font-size: 30rpx;
+  text-align:center;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+
+.modal-footer {
+  display: flex;
+  height: 85rpx;
+  font-size: 34rpx;
+  justify-content: space-around;
+}
+
+.btn-cancel {
+  width: 30%;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00bcd4;
+  background-color: white;
+  border: 1rpx #00bcd4 solid;
+  border-radius: 100rpx;
+}
+
+.btn-confirm {
+  width: 30%;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #00bcd4;
+  border-radius: 100rpx;
+}

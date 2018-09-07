@@ -1,0 +1,68 @@
+/* pages/personal center/user.wxss */
+/* pages/page.wxss */
+.user{
+  position: absolute;
+  top:80rpx;
+  display: flex;
+  flex-direction: row; 
+  margin-left: 30rpx;
+}
+.user button{
+  border-radius: 100rpx;
+  background-color: rgba(0,0,0,0);
+  border: 1rpx  #00bcd4 solid;
+  color: #00bcd4;
+  height: 100rpx;
+}
+.user text{
+  color:white;
+  font-size:38rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30rpx;
+}
+.personalData{
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+}
+radio {
+  transform:scale(0.8);
+  color: #00bcd4;
+}
+.data{
+  color: #666666;
+}
+.btn{
+  background-color:white;
+  border-radius: 100rpx;
+  border: 1rpx #00bcd4  solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270rpx;
+  height: 60rpx;
+  color: #00bcd4
+}
+.alter{
+  position: absolute;
+  top:20rpx;
+  left: 75%;
+  display: flex;
+  flex-direction: row; 
+  justify-content: flex-end;
+}
+.alter text{
+  color: white;
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}
+.alter icon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+

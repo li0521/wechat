@@ -1,0 +1,75 @@
+<view>
+  <view>
+    <view class="history">
+      <picker mode="date" value="{{date}}" bindchange="bindDateChange" end="{{endDate}}">
+        <view class="date">
+          <text>{{date}}</text>
+          <image style='width:20rpx; height:16rpx;' src='{{sanjiao}}'></image>
+        </view>
+      </picker>
+      <button class='cx-btn' bindtap="getHistory">查询</button>
+      <navigator url="/pages/sporthistory/sporthistory" hover-class='none'>
+        <text class="lishi">历史记录</text>
+      </navigator>
+    </view>
+
+    <view>
+      <text class="kaluli">燃烧卡路里：</text>
+      <text class="kaluli-value">{{num}}千卡</text>
+    </view>
+
+    <view>
+      <image class="juxing" src="{{juxing}}"></image>
+    </view>
+
+    <view class="jibu">
+      <text>自动记步</text>
+      <switch color='#00bcd4' checked='{{isCheckedjibu}}' bindchange='bindchangejibu'></switch>
+    </view>
+    <view>
+      <image class="juxing1" src="{{juxing1}}"></image>
+    </view>
+
+    <view class="bushut">
+      <view class="text">
+        <text>步数</text>
+      </view>
+      <view class="text">
+        <text>消耗</text>
+      </view>
+      <view class="text">
+        <text>里程</text>
+      </view>
+    </view>
+
+    <view wx:if='{{hasRundata}}' class="bushu">
+      <text class="text">{{rundata}}</text>
+      <text class="text">{{caluli}}千卡</text>
+      <text class="text">{{km}}公里</text>
+    </view>
+    <view wx:if='{{!hasRundata}}' class="bushu">
+      <text class="text">-</text>
+      <text class="text">-</text>
+      <text class="text">-</text>
+    </view>
+
+    <view>
+      <image class="juxing" src="{{juxing}}"></image>
+    </view>
+
+    <view class="jinri">
+      <navigator url='/pages/selectsport/selectsport' hover-class='none'>
+        <text>今日运动</text>
+        <image class="jiahao" src="{{jiahao}}"></image>
+      </navigator>
+    </view>
+
+    <view class="jinriyundong weui-cells weui-cells_after-title">
+      <navigator bindtap='delete' data-id='{{item.sp_type}}' data-value='{{item.sp_num}}' data-name="{{item.name}}" wx:for='{{todayData}}' class="weui-cell weui-cell_access" url="/pages/deletesport/deletesport" wx:if="{{item.sp_type != 'Wewalk'}}">
+        <view class="weui-cell__bd">{{item.name}}{{item.sp_num}}分钟</view>
+        <view>{{item.cal}}千卡</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+</view>

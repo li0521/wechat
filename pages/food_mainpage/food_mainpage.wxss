@@ -1,0 +1,328 @@
+.history{
+  background-color: white;
+  padding-top: 50rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.date{
+  width: 220rpx;
+  height:60rpx; 
+  font-size: 28rpx;
+  background-color: #eeeeee;
+  padding-left: 10rpx;
+  padding-right: 0rpx;
+  margin-right: 0rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 100rpx;
+}
+.date text{
+  width: 170rpx;
+  padding-left: 10rpx;
+}
+.lishi{
+  height:60rpx;
+  color: #00bcd4;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+}
+.hot{
+  float: left;
+  margin-left: 30rpx;
+}
+.ftext{
+  font-size: 32rpx;
+  color: #999999;
+}
+.ftext2{
+  font-size: 32rpx;
+}
+.protein{
+  margin-left: 50%;
+}
+.record3{
+  margin-top: 10rpx;
+  margin-bottom: 40rpx;
+}
+
+.module2{
+  background-color: #ededed;
+  height: 18rpx
+}
+/* 早餐列表 */
+.bre_text{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 90rpx;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.bre{
+  font-size: 45rpx;
+  font-weight: 700rpx;
+  color: #000000
+}
+.bre_hot{
+  margin-left: 30rpx;
+  font-size: 28rpx;
+  color: #00bcd4;
+}
+
+.add{
+  width: 170rpx;
+  height: 60rpx;
+  border: 1rpx solid  #00bcd4;
+  color:#00bcd4;
+  border-radius: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bre_allnum{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  color:#999999;
+}
+.food{
+  font-size: 30rpx;
+  color: #404040;
+}
+
+.g_unit{
+  font-size: 34rpx;
+}
+.bre_food1_module2{
+  float: right;
+  width: 250rpx;
+}
+.food_hot_num{
+  font-size: 30rpx;
+  color: #00bcd4;
+}
+
+
+/* 上午加餐列表 */
+.breakfast2{
+  width: 100%;
+  background-color: #ffffff;
+  margin-left: 20rpx;
+}
+.bre2_text{
+  width: 100%;
+  height: 90rpx;
+  margin-top: 15rpx;
+}
+.bre2{
+  font-size: 45rpx;
+  font-weight: 700rpx;
+  color: #000000
+}
+.bre2_hot{
+  font-size: 32rpx;
+  color: #87cefa;
+  margin-left: 35rpx
+}
+.bre2_allnum{
+  width: 100%;
+  height: 50rpx;
+  font-size: 30rpx;
+  color:#778899;
+}
+.bre2_food1{
+  width: 98%;
+}
+
+.bre2_food1_name{
+  float: left;
+  font-size: 34rpx;
+}
+.bre2_food1_num{
+  font-size: 33rpx;
+}
+
+.bre2_food1_hot_num{
+  font-size: 34rpx;
+  color: #87cefa;
+}
+
+ /* 午餐列表 */
+.lunch{
+  width: 100%;
+  background-color: #ffffff;
+  margin-left: 20rpx;
+}
+.lun_text{
+  width: 100%;
+  height: 90rpx;
+  margin-top: 15rpx;
+}
+.lun{
+  font-size: 45rpx;
+  font-weight: 700rpx;
+  color: #000000
+}
+.lun_hot{
+  font-size: 32rpx;
+  color: #87cefa;
+  margin-left: 35rpx
+}
+.lun_allnum{
+  width: 100%;
+  height: 50rpx;
+  font-size: 30rpx;
+  color:#778899;
+}
+.lun_food1{
+  width: 98%;
+}
+
+.lun_food1_name{
+  float: left;
+  font-size: 34rpx;
+}
+.lun_food1_num{
+  font-size: 33rpx;
+}
+
+.lun_food1_hot_num{
+  font-size: 34rpx;
+  color: #87cefa;
+}
+
+/* 下午加餐列表 */
+.lunch2{
+  width: 100%;
+  background-color: #ffffff;
+  margin-left: 20rpx;
+}
+.lun2_text{
+  width: 100%;
+  height: 90rpx;
+  margin-top: 15rpx;
+}
+.lun2{
+  font-size: 45rpx;
+  font-weight: 700rpx;
+  color: #000000
+}
+.lun2_hot{
+  font-size: 32rpx;
+  color: #87cefa;
+  margin-left: 35rpx
+}
+.lun2_allnum{
+  width: 100%;
+  height: 50rpx;
+  font-size: 30rpx;
+  color:#778899;
+}
+.lun2_food1{
+  width: 98%;
+}
+
+.lun2_food1_name{
+  float: left;
+  font-size: 34rpx;
+}
+.lun2_food1_num{
+  font-size: 33rpx;
+}
+.lun2_food1_hot_num{
+  font-size: 34rpx;
+  color: #87cefa;
+}
+
+/* 晚餐列表 */
+.dinner{
+  width: 100%;
+  background-color: #ffffff;
+  margin-left: 20rpx;
+}
+.din_text{
+  width: 100%;
+  height: 90rpx;
+  margin-top: 15rpx;
+}
+.din{
+  font-size: 45rpx;
+  font-weight: 700rpx;
+  color: #000000;
+}
+.din_hot{
+  font-size: 32rpx;
+  color: #87cefa;
+  margin-left: 35rpx
+}
+.din_allnum{
+  width: 100%;
+  height: 50rpx;
+  font-size: 30rpx;
+  color:#778899;
+}
+.din_food1{
+  width: 98%;
+}
+.din_food1_name{
+  float: left;
+  font-size: 34rpx;
+}
+.din_food1_num{
+  font-size: 33rpx;
+}
+
+.din_food1_hot_num{
+  font-size: 34rpx;
+  color: #87cefa;
+}
+
+/* 晚上加餐列表 */
+.dinner2{
+  width: 100%;
+  background-color: #ffffff;
+  margin-left: 20rpx;
+}
+.din2_text{
+  width: 100%;
+  height: 90rpx;
+  margin-top: 15rpx;
+}
+.din2{
+  font-size: 45rpx;
+  font-weight: 700rpx;
+  color: #000000
+}
+.din2_hot{
+  font-size: 32rpx;
+  color: #87cefa;
+  margin-left: 35rpx
+}
+.din2_allnum{
+  width: 100%;
+  height: 50rpx;
+  font-size: 30rpx;
+  color:#778899;
+}
+.din2_food1{
+  width: 98%;
+}
+
+.din2_food1_name{
+  float: left;
+  font-size: 34rpx;
+}
+.din2_food1_num{
+  font-size: 33rpx;
+}
+
+.din2_food1_hot_num{
+  font-size: 34rpx;
+  color: #87cefa;
+}
+

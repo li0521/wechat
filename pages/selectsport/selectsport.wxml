@@ -1,0 +1,19 @@
+<!--pages/selectsport/selectsport.wxml-->
+<!-- <text>pages/selectsport/selectsport.wxml</text> -->
+
+
+<view wx:for='{{sport}}' class="section weui-cells weui-cells_after-title">  
+  <picker bindchange="bindPickerChange" data-id='{{item.sport_type}}' range='{{array}}'>
+    <view class="picker">
+      <view class="label">
+        {{item.sport_name}}
+      </view>
+      <view class='qianka'>
+        <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/pickerArrow-a8b918f05f.png"></image>
+        <text>{{item.sport_value}}千卡</text>
+      </view>
+    </view>
+  </picker>
+</view>
+
+

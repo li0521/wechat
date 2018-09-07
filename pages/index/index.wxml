@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="">
+  
+  <image style="width: 100%; height: 450rpx;" mode="aspectFill" src="{{index_image}}"></image>
+  
+  <view class="top">
+    <image style="width: 58rpx; height: 58rpx;"src="{{indexData[0].user_avatar}}"></image>
+    <text decode="{{true}}">&nbsp;{{indexData[0].user_name}}占领了封面</text>
+  </view>
+
+  <view class="user">
+      <view class="weui-media-box weui-media-box_appmsg">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg No">
+          <text></text>
+        </view>
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg avatar">
+          <image class="weui-media-box__thumb " src="{{userInfo.avatarUrl}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title name">{{userInfo.nickName}}</view>
+          <view class="weui-media-box__desc">第{{per.no}}名</view>
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg value">
+          <view class="weui-media-box__title">{{per.caluli}}</view>
+          <view class="weui-media-box__desc" style=' display: flex;justify-content: center;'>千卡</view>
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg dianzan">
+          <view class="weui-media-box__title" style=' display: flex;justify-content: center;'>{{per.zannum}}</view>
+          <image class="weui-media-box__desc" src="{{dianzan}}" />
+        </view>
+      </view>
+  </view>
+  <view class="juxing"></view>
+  <view class="paihang">
+    <block wx:for='{{indexData}}'>
+      <view class="weui-media-box weui-media-box_appmsg">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg No">
+          <text>{{index + 1}}</text>
+        </view>
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg avatar">
+          <image class="weui-media-box__thumb " src="{{item.user_avatar}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title name">{{item.user_name}}</view>
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg value">
+          <view class="weui-media-box__title">{{item.user_caluli}}</view>
+          <view class="weui-media-box__desc" style=' display: flex;justify-content: center;'>千卡</view>
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg dianzan" bindtap='zan' data-id='{{item.id}}'>
+          <view class="weui-media-box__title" style=' display: flex;justify-content: center;'>{{item.zansum}}</view>
+          <image wx:if="{{item.isZan}}" class="weui-media-box__desc"  src="{{dianzan}}"/>
+          <image wx:else class="weui-media-box__desc"  src="{{dianzan1}}"/>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

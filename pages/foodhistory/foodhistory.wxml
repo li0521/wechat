@@ -1,0 +1,30 @@
+<!--pages/foodhistory/foodhistory.wxml-->
+<!-- 表单，提交日期 -->
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="history">
+      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="date-btn"><text>{{date}}</text><image style='width:20rpx; height:16rpx;' src='{{sanjiao}}'></image></view>
+      </picker>
+      <text class="history-text">至</text>
+      <picker mode="date" value="{{date1}}" bindchange="bindDateChange1">
+        <view class="date-btn"><text>{{date1}}</text><image style='width:20rpx; height:16rpx;' src='{{sanjiao}}'></image></view>
+      </picker>
+      <view class="chaxun" bindtap='getData'><text>查询</text></view>
+    </view>
+</form>
+
+<view>
+  <image class="juxing" src="{{juxing}}"></image>
+</view>
+
+<!-- 日期及热量 -->
+<view class="historyTitle">
+  <text class="date">日期</text>
+  <text class="reliang">热量</text>
+</view>
+<view class="weui-cells weui-cells_after-title">
+  <view wx:for="{{Data}}" wx:key="date" class="historyData weui-cell weui-cell_access ">
+    <text>{{item.date}}</text>
+    <text>{{item.cal}}千卡</text>
+  </view>
+</view>

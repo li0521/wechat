@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/sport/sport",
+    "pages/selectsport/selectsport",
+    "pages/deletesport/deletesport",
+    "pages/personalCenter/user",
+    "pages/sporthistory/sporthistory",
+    "pages/food_mainpage/food_mainpage",
+    "pages/foodtype/foodtype",
+    "pages/foodtype/selectfood/selectfood",
+    "pages/foodhistory/foodhistory",
+    "pages/deletefood/deletefood",
+    "pages/personalCenter/alter"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00bcd4",
+    "navigationBarTitleText": "运动排行榜",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ededed"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#00bcd4",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/shouye1.png",
+        "iconPath": "images/shouye.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/yinshi1.png",
+        "iconPath": "images/yinshi.png",
+        "pagePath": "pages/food_mainpage/food_mainpage",
+        "text": "饮食"
+      },
+      {
+        "selectedIconPath": "images/yundong1.png",
+        "iconPath": "images/yundong.png",
+        "pagePath": "pages/sport/sport",
+        "text": "运动"
+      },
+      {
+        "selectedIconPath": "images/geren1.png",
+        "iconPath": "images/geren.png",
+        "pagePath": "pages/personalCenter/user",
+        "text": "个人"
+      }
+    ]
+  }
+}
